@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maruf Hassan | Android Developer</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="asset/style.css">
+</head>
+<body>
+
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">Maruf<span>.Dev</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#timeline" class="nav-link">Journey</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="language-selector">
+                    <button class="language-toggle" id="languageToggle" aria-label="Change language">
+                        <i class="fas fa-globe"></i>
+                        <span id="currentLang">EN</span>
+                    </button>
+                    <div class="language-dropdown" id="languageDropdown">
+                        <a href="index.html" class="language-option" data-lang="en">🇺🇸 English</a>
+                        <a href="arabic/index.html" class="language-option" data-lang="ar">🇸🇦 العربية</a>
+                        <a href="italian/index.html" class="language-option" data-lang="it">🇮🇹 Italiano</a>
+                        <a href="russian/index.html" class="language-option" data-lang="ru">🇷🇺 Русский</a>
+                    </div>
+                </li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section id="home" class="hero">
+        <!-- Animated background blobs -->
+        <div class="hero-bg">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-text reveal">
+                <p class="hero-greeting">👋 Hello, I'm</p>
+                <h1 class="hero-name">Maruf Hassan</h1>
+                <div class="hero-role">
+                    <span>I'm a </span>
+                    <span class="typing-text" id="typingText"></span>
+                    <span class="typing-cursor">|</span>
+                </div>
+                <p class="hero-desc">
+                    Passionate Android developer crafting mobile experiences
+                    with Java &amp; XML. Currently learning and building apps as a new developer.
+                </p>
+                <div class="hero-cta">
+                    <a href="#" class="btn btn-primary">
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fas fa-paper-plane"></i> Contact Me
+                    </a>
+                </div>
+                <div class="hero-socials">
+                    <a href="https://github.com/exploremaruf" target="_blank" rel="noopener" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:maruf.chats@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/exploremaruf" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/" target="_blank" rel="noopener" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://t.me/exploremaruf" target="_blank" rel="noopener" aria-label="Telegram">
+                        <i class="fab fa-telegram-plane"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image reveal">
+                <div class="image-wrapper">
+                    <img src="asset/images/maruf.jpeg" alt="Maruf Hassan — Android Developer">
+                    <div class="image-ring"></div>
+                </div>
+            </div>
+        </div>
+        <a href="#about" class="scroll-down" aria-label="Scroll down">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- ========== ABOUT SECTION ========== -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="section-label">Get To Know Me</p>
+                <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <h3>Aspiring Android Developer &amp; Learner</h3>
+                    <p>
+                        Hi! I'm Maruf Hassan, a new Android developer from Bangladesh who is
+                        passionate about building mobile applications. I develop Android apps
+                        using Java and XML, learning the fundamentals of Android development
+                        step by step.
+                    </p>
+                    <p>
+                        I am currently a Diploma in Computer Science &amp; Technology student,
+                        started my studies in 2023. I began learning Android development in 2025
+                        and have been building practice projects to strengthen my skills.
+                    </p>
+                    <p>
+                        I enjoy exploring new concepts in mobile development and improving my
+                        coding skills every day.
+                    </p>
+                    <a href="#contact" class="btn btn-primary">Let's Talk <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="about-stats reveal">
+                    <div class="stat-card">
+                        <span class="stat-number" data-target="2025">0</span>
+                        <p>Learning Since</p>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-target="3">0</span>
+                        <span class="stat-suffix">+</span>
+                        <p>Projects Built</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SKILLS SECTION ========== -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="section-label">What I Work With</p>
+                <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+            </div>
+            <div class="skills-grid">
+
+                <div class="skill-card reveal">
+                    <div class="skill-icon"><i class="fab fa-android"></i></div>
+                    <h4>Android SDK</h4>
+                    <p>Native Android development, activities, fragments &amp; lifecycle management</p>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="55"></div>
+                    </div>
+                    <span class="skill-percent">55%</span>
+                </div>
+
+                <div class="skill-card reveal">
+                    <div class="skill-icon"><i class="fab fa-java"></i></div>
+                    <h4>Java</h4>
+                    <p>Core Java programming &amp; Android app development with Java</p>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="50"></div>
+                    </div>
+                    <span class="skill-percent">50%</span>
+                </div>
+
+                <div class="skill-card reveal">
+                    <div class="skill-icon"><i class="fas fa-code"></i></div>
+                    <h4>XML</h4>
+                    <p>Building Android UI layouts with XML &amp; View-based system</p>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="55"></div>
+                    </div>
+                    <span class="skill-percent">55%</span>
+                </div>
+
+                <div class="skill-card reveal">
+                    <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+                    <h4>Git / GitHub</h4>
+                    <p>Version control basics &amp; managing code repositories</p>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="45"></div>
+                    </div>
+                    <span class="skill-percent">45%</span>
+                </div>
+
+                <div class="skill-card reveal">
+                    <div class="skill-icon"><i class="fas fa-palette"></i></div>
+                    <h4>Material Design</h4>
+                    <p>Applying Material Design guidelines for clean Android UIs</p>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="45"></div>
+                    </div>
+                    <span class="skill-percent">45%</span>
+                </div>
+
+                <div class="skill-card reveal">
+                    <div class="skill-icon"><i class="fas fa-fire"></i></div>
+                    <h4>Firebase</h4>
+                    <p>Learning Firebase basics for authentication &amp; data storage</p>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="35"></div>
+                    </div>
+                    <span class="skill-percent">35%</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PROJECTS SECTION ========== -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="section-label">What I've Built</p>
+                <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+            </div>
+            <div class="projects-grid">
+
+                <div class="project-card reveal">
+                    <div class="project-inner">
+                        <div class="project-front">
+                            <div class="project-icon"><i class="fas fa-tasks"></i></div>
+                            <h3>TaskMaster</h3>
+                            <p>A simple task management app for organizing daily to-dos, built as a learning project using Java and XML layouts.</p>
+                            <div class="project-tags">
+                                <span>Java</span>
+                                <span>XML</span>
+                                <span>Android SDK</span>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <h3>TaskMaster</h3>
+                            <p>A practice project to learn Android fundamentals — adding, editing, and deleting tasks with a clean XML-based UI and local data storage.</p>
+                            <div class="project-links">
+                                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i> Code</a>
+                                <a href="#" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal">
+                    <div class="project-inner">
+                        <div class="project-front">
+                            <div class="project-icon"><i class="fas fa-sticky-note"></i></div>
+                            <h3>NoteKeeper</h3>
+                            <p>A basic note-taking app to practice working with SQLite database, activities, and XML layouts in Android.</p>
+                            <div class="project-tags">
+                                <span>Java</span>
+                                <span>XML</span>
+                                <span>SQLite</span>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <h3>NoteKeeper</h3>
+                            <p>Built to learn CRUD operations with SQLite in Android. Users can create, read, update and delete notes with a simple XML interface.</p>
+                            <div class="project-links">
+                                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i> Code</a>
+                                <a href="#" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal">
+                    <div class="project-inner">
+                        <div class="project-front">
+                            <div class="project-icon"><i class="fas fa-cloud-sun"></i></div>
+                            <h3>WeatherNow</h3>
+                            <p>A weather app practice project that fetches and displays weather data using a public API and XML-based UI.</p>
+                            <div class="project-tags">
+                                <span>Java</span>
+                                <span>XML</span>
+                                <span>REST API</span>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <h3>WeatherNow</h3>
+                            <p>A learning project to understand API calls in Android using Java. Displays basic weather information with a clean Material Design XML layout.</p>
+                            <div class="project-links">
+                                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i> Code</a>
+                                <a href="#" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal">
+                    <div class="project-inner">
+                        <div class="project-front">
+                            <div class="project-icon"><i class="fas fa-calculator"></i></div>
+                            <h3>SimpleCalc</h3>
+                            <p>A calculator app built to practice Java logic, event handling, and designing UI with XML in Android Studio.</p>
+                            <div class="project-tags">
+                                <span>Java</span>
+                                <span>XML</span>
+                                <span>Android SDK</span>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <h3>SimpleCalc</h3>
+                            <p>One of my first Android projects — a functional calculator using Java for logic and XML for layout design. Helped me understand Android basics.</p>
+                            <div class="project-links">
+                                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i> Code</a>
+                                <a href="#" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TIMELINE / JOURNEY SECTION ========== -->
+    <section id="timeline" class="timeline section">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="section-label">My Journey</p>
+                <h2 class="section-title">Experience &amp; <span class="gradient-text">Education</span></h2>
+            </div>
+            <div class="timeline-wrapper">
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">2023 — Present</span>
+                        <h3>Diploma in Engineering (CST)</h3>
+                        <h4>Polytechnic Institute, Bangladesh</h4>
+                        <p>Pursuing Diploma in Computer Science &amp; Technology, learning programming fundamentals, data structures, and software development concepts.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">2025 — Present</span>
+                        <h3>Started Android Development</h3>
+                        <h4>Self-Learning</h4>
+                        <p>Self-learning Android development with Java &amp; XML. Building practice projects to strengthen skills and understand mobile app development concepts.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT SECTION ========== -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="section-label">Get In Touch</p>
+                <h2 class="section-title">Contact <span class="gradient-text">Me</span></h2>
+            </div>
+            <div class="contact-grid">
+
+                <div class="contact-info reveal">
+                    <h3>Let's Connect</h3>
+                    <p>
+                        I'm a new Android developer eager to learn and grow. Whether you have
+                        feedback, collaboration ideas, or just want to say hi — feel free to
+                        reach out!
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fab fa-github"></i>
+                            <a href="https://github.com/exploremaruf" target="_blank" rel="noopener">github.com/exploremaruf</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:maruf.chats@gmail.com">maruf.chats@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin-in"></i>
+                            <a href="https://linkedin.com/in/exploremaruf" target="_blank" rel="noopener">linkedin.com/in/exploremaruf</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/" target="_blank" rel="noopener">WhatsApp</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-telegram-plane"></i>
+                            <a href="https://t.me/exploremaruf" target="_blank" rel="noopener">Telegram</a>
+                        </div>
+                    </div>
+                    <div class="contact-socials">
+                        <a href="https://github.com/exploremaruf" target="_blank" rel="noopener" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:maruf.chats@gmail.com" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/exploremaruf" target="_blank" rel="noopener" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://wa.me/" target="_blank" rel="noopener" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://t.me/exploremaruf" target="_blank" rel="noopener" aria-label="Telegram">
+                            <i class="fab fa-telegram-plane"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <form class="contact-form reveal" id="contactForm" novalidate>
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Project Inquiry / Collaboration">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#home" class="logo">Maruf<span>.Dev</span></a>
+                    <p>Learning Android development one app at a time.</p>
+                    <div class="footer-socials">
+                        <a href="https://github.com/exploremaruf" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="mailto:maruf.chats@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="https://linkedin.com/in/exploremaruf" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://wa.me/" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://t.me/exploremaruf" target="_blank" rel="noopener" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Technologies</h4>
+                    <ul>
+                        <li><a href="#skills">Android SDK</a></li>
+                        <li><a href="#skills">Java</a></li>
+                        <li><a href="#skills">XML</a></li>
+                        <li><a href="#skills">Git</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Maruf.Dev — All Rights Reserved</p>
+                <p>Designed &amp; Built with <i class="fas fa-heart" style="color: var(--accent-secondary);"></i> by Maruf Hassan</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="asset/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Маруф Хасан | Android-разработчик</title>
+    <!-- Google Fonts — Authentic Russian typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400&family=Yeseva+One&family=Caveat:wght@400;700&family=Marmelad&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="asset/style.css">
+</head>
+<body>
+
+    <!-- ========== Навигация ========== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">Маруф<span>.dev</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Главная</a></li>
+                <li><a href="#about" class="nav-link">Обо мне</a></li>
+                <li><a href="#skills" class="nav-link">Навыки</a></li>
+                <li><a href="#projects" class="nav-link">Проекты</a></li>
+                <li><a href="#timeline" class="nav-link">Путь</a></li>
+                <li><a href="#contact" class="nav-link">Контакты</a></li>
+                <li class="language-selector">
+                    <button class="language-toggle" id="languageToggle" aria-label="Изменить язык">
+                        <i class="fas fa-globe"></i>
+                        <span id="currentLang">RU</span>
+                    </button>
+                    <div class="language-dropdown" id="languageDropdown">
+                        <a href="../index.html" class="language-option" data-lang="en">🇺🇸 English</a>
+                        <a href="../arabic/index.html" class="language-option" data-lang="ar">🇸🇦 العربية</a>
+                        <a href="../italian/index.html" class="language-option" data-lang="it">🇮🇹 Italiano</a>
+                        <a href="index.html" class="language-option" data-lang="ru">🇷🇺 Русский</a>
+                    </div>
+                </li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ========== Главный экран ========== -->
+    <section id="home" class="hero">
+        <!-- Animated background blobs -->
+        <div class="hero-bg">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+        </div>
+        <!-- Russian Cyrillic ornamental watermark -->
+        <div class="tughra-watermark" aria-hidden="true">Ж</div>
+        <div class="hero-container">
+            <div class="hero-text reveal">
+                <p class="hero-greeting cursive-lg">Здравствуйте, я —</p>
+                <h1 class="hero-name">Маруф Хасан</h1>
+                <div class="hero-role">
+                    <span>Я — </span>
+                    <span class="typing-text" id="typingText"></span>
+                    <span class="typing-cursor">|</span>
+                </div>
+                <p class="hero-desc">
+                    Android-разработчик, увлечённый созданием мобильных приложений
+                    на Java и XML. Сейчас учусь и создаю приложения как начинающий разработчик.
+                </p>
+                <div class="hero-cta">
+                    <a href="#" class="btn btn-primary">
+                        <i class="fas fa-download"></i> Скачать резюме
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fas fa-paper-plane"></i> Связаться
+                    </a>
+                </div>
+                <div class="hero-socials">
+                    <a href="https://github.com/exploremaruf" target="_blank" rel="noopener" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:maruf.chats@gmail.com" aria-label="Электронная почта">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/exploremaruf" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/" target="_blank" rel="noopener" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://t.me/exploremaruf" target="_blank" rel="noopener" aria-label="Telegram">
+                        <i class="fab fa-telegram-plane"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image reveal">
+                <div class="image-wrapper">
+                    <img src="asset/images/maruf.jpeg" alt="Маруф Хасан — Android-разработчик">
+                    <div class="image-ring"></div>
+                </div>
+            </div>
+        </div>
+        <a href="#about" class="scroll-down" aria-label="Прокрутить вниз">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- ========== Обо мне ========== -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="section-label cursive-section-label">Познакомьтесь со мной</p>
+                <h2 class="section-title">Обо <span class="gradient-text">мне</span></h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <h3 class="cursive-lg" style="margin-bottom: 20px;">Начинающий Android-разработчик</h3>
+                    <p>
+                        Здравствуйте! Меня зовут Маруф Хасан, я начинающий Android-разработчик
+                        из Бангладеш, увлечённый созданием мобильных приложений. Разрабатываю
+                        приложения на Java и XML, шаг за шагом изучая основы Android-разработки.
+                    </p>
+                    <p>
+                        Сейчас я студент дипломной программы по информатике,
+                        начал обучение в 2023 году. В 2025 году приступил к изучению
+                        Android-разработки и создаю учебные проекты для развития навыков.
+                    </p>
+                    <p>
+                        Мне нравится открывать для себя новые концепции мобильной разработки
+                        и совершенствовать свои навыки программирования каждый день.
+                    </p>
+                    <a href="#contact" class="btn btn-primary">Поговорим <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="about-stats reveal">
+                    <div class="stat-card">
+                        <span class="stat-number" data-target="2025">0</span>
+                        <p>Учусь с</p>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-target="3">0</span>
+                        <span class="stat-suffix">+</span>
+                        <p>Завершённых проектов</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Навыки ========== -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="section-label cursive-section-label">Чем я занимаюсь</p>
+                <h2 class="section-title">Технические <span class="gradient-text">навыки</span></h2>
+            </div>
+            <div class="skills-grid">
+
+                <div class="skill-card reveal">
+                    <div class="skill-icon"><i class="fab fa-android"></i></div>
+                    <h4>Android SDK</h4>
+                    <p>Нативная Android-разработка, Activity, Fragments и управление жизненным циклом</p>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="55"></div>
+                    </div>
+                    <span class="skill-percent">55%</span>
+                </div>
+
+                <div class="skill-card reveal">
+                    <div class="skill-icon"><i class="fab fa-java"></i></div>
+                    <h4>Java</h4>
+                    <p>Основы Java-программирования и разработка Android-приложений</p>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="50"></div>
+                    </div>
+                    <span class="skill-percent">50%</span>
+                </div>
+
+                <div class="skill-card reveal">
+                    <div class="skill-icon"><i class="fas fa-code"></i></div>
+                    <h4>XML</h4>
+                    <p>Создание интерфейсов Android с помощью XML-разметки</p>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="55"></div>
+                    </div>
+                    <span class="skill-percent">55%</span>
+                </div>
+
+                <div class="skill-card reveal">
+                    <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+                    <h4>Git / GitHub</h4>
+                    <p>Основы контроля версий и управление репозиториями</p>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="45"></div>
+                    </div>
+                    <span class="skill-percent">45%</span>
+                </div>
+
+                <div class="skill-card reveal">
+                    <div class="skill-icon"><i class="fas fa-palette"></i></div>
+                    <h4>Material Design</h4>
+                    <p>Применение принципов Material Design для создания чистых Android-интерфейсов</p>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="45"></div>
+                    </div>
+                    <span class="skill-percent">45%</span>
+                </div>
+
+                <div class="skill-card reveal">
+                    <div class="skill-icon"><i class="fas fa-fire"></i></div>
+                    <h4>Firebase</h4>
+                    <p>Изучение основ Firebase для аутентификации и хранения данных</p>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="35"></div>
+                    </div>
+                    <span class="skill-percent">35%</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Проекты ========== -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="section-label cursive-section-label">Мои работы</p>
+                <h2 class="section-title">Избранные <span class="gradient-text">проекты</span></h2>
+            </div>
+            <div class="projects-grid">
+
+                <div class="project-card reveal">
+                    <div class="project-inner">
+                        <div class="project-front">
+                            <div class="project-icon"><i class="fas fa-tasks"></i></div>
+                            <h3>Менеджер задач</h3>
+                            <p>Простое приложение для управления ежедневными задачами, созданное как учебный проект на Java и XML.</p>
+                            <div class="project-tags">
+                                <span>Java</span>
+                                <span>XML</span>
+                                <span>Android SDK</span>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <h3>Менеджер задач</h3>
+                            <p>Учебный проект для освоения основ Android — добавление, редактирование и удаление задач с чистым XML-интерфейсом и локальным хранением.</p>
+                            <div class="project-links">
+                                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i> Код</a>
+                                <a href="#" aria-label="Просмотр"><i class="fas fa-external-link-alt"></i> Демо</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal">
+                    <div class="project-inner">
+                        <div class="project-front">
+                            <div class="project-icon"><i class="fas fa-sticky-note"></i></div>
+                            <h3>Записная книжка</h3>
+                            <p>Базовое приложение для заметок, созданное для практики работы с SQLite, Activity и XML.</p>
+                            <div class="project-tags">
+                                <span>Java</span>
+                                <span>XML</span>
+                                <span>SQLite</span>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <h3>Записная книжка</h3>
+                            <p>Создано для изучения CRUD-операций с SQLite в Android. Пользователи могут создавать, читать, обновлять и удалять заметки через простой XML-интерфейс.</p>
+                            <div class="project-links">
+                                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i> Код</a>
+                                <a href="#" aria-label="Просмотр"><i class="fas fa-external-link-alt"></i> Демо</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal">
+                    <div class="project-inner">
+                        <div class="project-front">
+                            <div class="project-icon"><i class="fas fa-cloud-sun"></i></div>
+                            <h3>Погода сейчас</h3>
+                            <p>Учебное приложение погоды, получающее и отображающее данные через публичный API и XML-интерфейс.</p>
+                            <div class="project-tags">
+                                <span>Java</span>
+                                <span>XML</span>
+                                <span>REST API</span>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <h3>Погода сейчас</h3>
+                            <p>Учебный проект для понимания API-запросов в Android на Java. Отображает базовую информацию о погоде в чистом Material-дизайне.</p>
+                            <div class="project-links">
+                                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i> Код</a>
+                                <a href="#" aria-label="Просмотр"><i class="fas fa-external-link-alt"></i> Демо</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal">
+                    <div class="project-inner">
+                        <div class="project-front">
+                            <div class="project-icon"><i class="fas fa-calculator"></i></div>
+                            <h3>Калькулятор</h3>
+                            <p>Приложение-калькулятор для практики логики Java, обработки событий и дизайна XML-интерфейса.</p>
+                            <div class="project-tags">
+                                <span>Java</span>
+                                <span>XML</span>
+                                <span>Android SDK</span>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <h3>Калькулятор</h3>
+                            <p>Один из первых моих Android-проектов — функциональный калькулятор на Java с XML-разметкой. Помог мне понять основы Android.</p>
+                            <div class="project-links">
+                                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i> Код</a>
+                                <a href="#" aria-label="Просмотр"><i class="fas fa-external-link-alt"></i> Демо</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Путь ========== -->
+    <section id="timeline" class="timeline section">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="section-label cursive-section-label">Мой путь</p>
+                <h2 class="section-title">Опыт и <span class="gradient-text">образование</span></h2>
+            </div>
+            <div class="timeline-wrapper">
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">2023 — настоящее время</span>
+                        <h3>Диплом инженера (Информатика)</h3>
+                        <h4>Политехнический институт, Бангладеш</h4>
+                        <p>Изучаю информатику и технологии, осваиваю основы программирования, структуры данных и концепции разработки ПО.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">2025 — настоящее время</span>
+                        <h3>Начало Android-разработки</h3>
+                        <h4>Самообучение</h4>
+                        <p>Самостоятельное изучение Android-разработки на Java и XML. Создаю учебные проекты для развития навыков и понимания мобильной разработки.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Контакты ========== -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="section-label cursive-section-label">Свяжитесь со мной</p>
+                <h2 class="section-title">Напишите <span class="gradient-text">мне</span></h2>
+            </div>
+            <div class="contact-grid">
+
+                <div class="contact-info reveal">
+                    <h3>Давайте общаться</h3>
+                    <p>
+                        Я начинающий Android-разработчик, стремящийся учиться и расти.
+                        Если у вас есть отзывы, идеи для сотрудничества или просто хотите
+                        поздороваться — не стесняйтесь писать!
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fab fa-github"></i>
+                            <a href="https://github.com/exploremaruf" target="_blank" rel="noopener">github.com/exploremaruf</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:maruf.chats@gmail.com">maruf.chats@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin-in"></i>
+                            <a href="https://linkedin.com/in/exploremaruf" target="_blank" rel="noopener">linkedin.com/in/exploremaruf</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/" target="_blank" rel="noopener">WhatsApp</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-telegram-plane"></i>
+                            <a href="https://t.me/exploremaruf" target="_blank" rel="noopener">Telegram</a>
+                        </div>
+                    </div>
+                    <div class="contact-socials">
+                        <a href="https://github.com/exploremaruf" target="_blank" rel="noopener" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:maruf.chats@gmail.com" aria-label="Электронная почта">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/exploremaruf" target="_blank" rel="noopener" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://wa.me/" target="_blank" rel="noopener" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://t.me/exploremaruf" target="_blank" rel="noopener" aria-label="Telegram">
+                            <i class="fab fa-telegram-plane"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <form class="contact-form reveal" id="contactForm" novalidate>
+                    <div class="form-group">
+                        <label for="name">Полное имя</label>
+                        <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Электронная почта</label>
+                        <input type="email" id="email" name="email" placeholder="email@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Тема</label>
+                        <input type="text" id="subject" name="subject" placeholder="Вопрос о проекте / сотрудничество">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Сообщение</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Расскажите о вашем проекте..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fas fa-paper-plane"></i> Отправить сообщение
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Подвал ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#home" class="logo">Маруф<span>.dev</span></a>
+                    <p>Изучаю Android-разработку, создавая приложения одно за другим.</p>
+                    <div class="footer-socials">
+                        <a href="https://github.com/exploremaruf" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="mailto:maruf.chats@gmail.com" aria-label="Почта"><i class="fas fa-envelope"></i></a>
+                        <a href="https://linkedin.com/in/exploremaruf" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://wa.me/" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://t.me/exploremaruf" target="_blank" rel="noopener" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Быстрые ссылки</h4>
+                    <ul>
+                        <li><a href="#home">Главная</a></li>
+                        <li><a href="#about">Обо мне</a></li>
+                        <li><a href="#skills">Навыки</a></li>
+                        <li><a href="#projects">Проекты</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Технологии</h4>
+                    <ul>
+                        <li><a href="#skills">Android SDK</a></li>
+                        <li><a href="#skills">Java</a></li>
+                        <li><a href="#skills">XML</a></li>
+                        <li><a href="#skills">Git</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Маруф.dev — Все права защищены</p>
+                <p>Спроектировано и создано с <i class="fas fa-heart" style="color: var(--accent-secondary);"></i> Маруфом Хасаном</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Наверх">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="asset/script.js"></script>
+</body>
+</html>

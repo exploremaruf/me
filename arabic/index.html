@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معروف حسن | مطوّر أندرويد</title>
+    <!-- Google Fonts — Arabic calligraphic + display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Aref+Ruqaa:wght@400;700&family=Scheherazade+New:wght@400;500;600;700&family=Reem+Kufi:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="asset/style.css">
+</head>
+<body>
+
+    <!-- ========== شريط التنقل ========== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">معروف<span>.ديف</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">الرئيسية</a></li>
+                <li><a href="#about" class="nav-link">عنّي</a></li>
+                <li><a href="#skills" class="nav-link">المهارات</a></li>
+                <li><a href="#projects" class="nav-link">المشاريع</a></li>
+                <li><a href="#timeline" class="nav-link">المسيرة</a></li>
+                <li><a href="#contact" class="nav-link">التواصل</a></li>
+                <li class="language-selector">
+                    <button class="language-toggle" id="languageToggle" aria-label="تغيير اللغة">
+                        <i class="fas fa-globe"></i>
+                        <span id="currentLang">AR</span>
+                    </button>
+                    <div class="language-dropdown" id="languageDropdown">
+                        <a href="../index.html" class="language-option" data-lang="en">🇺🇸 English</a>
+                        <a href="index.html" class="language-option" data-lang="ar">🇸🇦 العربية</a>
+                        <a href="../italian/index.html" class="language-option" data-lang="it">🇮🇹 Italiano</a>
+                        <a href="../russian/index.html" class="language-option" data-lang="ru">🇷🇺 Русский</a>
+                    </div>
+                </li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="فتح القائمة">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ========== قسم البطل ========== -->
+    <section id="home" class="hero">
+        <!-- Animated background blobs -->
+        <div class="hero-bg">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+        </div>
+        <!-- ﷽ — Ottoman tughra-style bismillah -->
+        <div class="tughra-watermark" aria-hidden="true">﷽</div>
+        <div class="hero-container">
+            <div class="hero-text reveal">
+                <p class="hero-greeting">ٱلسَّلَامُ عَلَيْكُمْ، أنا</p>
+                <h1 class="hero-name">معروف حسن</h1>
+                <div class="hero-role">
+                    <span>أنا </span>
+                    <span class="typing-text" id="typingText"></span>
+                    <span class="typing-cursor">|</span>
+                </div>
+                <p class="hero-desc">
+                    مطوّر أندرويد شغوف بصناعة تجارب الهواتف المحمولة
+                    باستخدام جافا و XML. حاليًا أتعلم وأبني التطبيقات كمطوّر جديد.
+                </p>
+                <div class="hero-cta">
+                    <a href="#" class="btn btn-primary">
+                        <i class="fas fa-download"></i> تحميل السيرة الذاتية
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fas fa-paper-plane"></i> تواصل معي
+                    </a>
+                </div>
+                <div class="hero-socials">
+                    <a href="https://github.com/exploremaruf" target="_blank" rel="noopener" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:maruf.chats@gmail.com" aria-label="البريد الإلكتروني">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/exploremaruf" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/" target="_blank" rel="noopener" aria-label="واتساب">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://t.me/exploremaruf" target="_blank" rel="noopener" aria-label="تيليجرام">
+                        <i class="fab fa-telegram-plane"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image reveal">
+                <div class="image-wrapper">
+                    <img src="asset/images/maruf.jpeg" alt="معروف حسن — مطوّر أندرويد">
+                    <div class="image-ring"></div>
+                </div>
+            </div>
+        </div>
+        <a href="#about" class="scroll-down" aria-label="مرّر للأسفل">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- ========== قسم عنّي ========== -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="section-label">تعرّف عليّ</p>
+                <h2 class="section-title">عنّي <span class="gradient-text">أنا</span></h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <h3>مطوّر أندرويد طموح ومتعلّم</h3>
+                    <p>
+                        مرحبًا! أنا معروف حسن، مطوّر أندرويد جديد من بنغلاديش
+                        شغوف ببناء تطبيقات الهاتف المحمول. أطوّر تطبيقات أندرويد
+                        باستخدام جافا و XML، وأتعلم أساسيات تطوير أندرويد خطوة بخطوة.
+                    </p>
+                    <p>
+                        أنا حاليًا طالب دبلوم في علوم الحاسب والتقنية،
+                        بدأت دراستي عام ٢٠٢٣. بدأت تعلّم تطوير أندرويد عام ٢٠٢٥
+                        وأبني مشاريع تدريبية لتعزيز مهاراتي.
+                    </p>
+                    <p>
+                        أستمتع باستكشاف مفاهيم جديدة في تطوير الهواتف المحمولة
+                        وتحسين مهاراتي البرمجية كل يوم.
+                    </p>
+                    <a href="#contact" class="btn btn-primary">لنتحدّث <i class="fas fa-arrow-left"></i></a>
+                </div>
+                <div class="about-stats reveal">
+                    <div class="stat-card">
+                        <span class="stat-number" data-target="2025">0</span>
+                        <p>أتعلّم منذ</p>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-target="3">0</span>
+                        <span class="stat-suffix">+</span>
+                        <p>مشاريع مُنجزة</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== قسم المهارات ========== -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="section-label">ما أعمل به</p>
+                <h2 class="section-title">المهارات <span class="gradient-text">التقنية</span></h2>
+            </div>
+            <div class="skills-grid">
+
+                <div class="skill-card reveal">
+                    <div class="skill-icon"><i class="fab fa-android"></i></div>
+                    <h4>أندرويد SDK</h4>
+                    <p>تطوير أندرويد الأصلي، الأنشطة، الأجزاء وإدارة دورة الحياة</p>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="55"></div>
+                    </div>
+                    <span class="skill-percent">٥٥٪</span>
+                </div>
+
+                <div class="skill-card reveal">
+                    <div class="skill-icon"><i class="fab fa-java"></i></div>
+                    <h4>جافا</h4>
+                    <p>برمجة جافا الأساسية وتطوير تطبيقات أندرويد بالجافا</p>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="50"></div>
+                    </div>
+                    <span class="skill-percent">٥٠٪</span>
+                </div>
+
+                <div class="skill-card reveal">
+                    <div class="skill-icon"><i class="fas fa-code"></i></div>
+                    <h4>XML</h4>
+                    <p>بناء واجهات أندرويد باستخدام XML ونظام العرض</p>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="55"></div>
+                    </div>
+                    <span class="skill-percent">٥٥٪</span>
+                </div>
+
+                <div class="skill-card reveal">
+                    <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+                    <h4>Git / GitHub</h4>
+                    <p>أساسيات التحكم بالإصدارات وإدارة مستودعات الأكواد</p>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="45"></div>
+                    </div>
+                    <span class="skill-percent">٤٥٪</span>
+                </div>
+
+                <div class="skill-card reveal">
+                    <div class="skill-icon"><i class="fas fa-palette"></i></div>
+                    <h4>ماتيريال ديزاين</h4>
+                    <p>تطبيق إرشادات التصميم المادي لواجهات أندرويد النظيفة</p>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="45"></div>
+                    </div>
+                    <span class="skill-percent">٤٥٪</span>
+                </div>
+
+                <div class="skill-card reveal">
+                    <div class="skill-icon"><i class="fas fa-fire"></i></div>
+                    <h4>فايربيس</h4>
+                    <p>تعلّم أساسيات فايربيس للمصادقة وتخزين البيانات</p>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="35"></div>
+                    </div>
+                    <span class="skill-percent">٣٥٪</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== قسم المشاريع ========== -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="section-label">ما بنيته</p>
+                <h2 class="section-title">المشاريع <span class="gradient-text">المميّزة</span></h2>
+            </div>
+            <div class="projects-grid">
+
+                <div class="project-card reveal">
+                    <div class="project-inner">
+                        <div class="project-front">
+                            <div class="project-icon"><i class="fas fa-tasks"></i></div>
+                            <h3>مدير المهام</h3>
+                            <p>تطبيق بسيط لإدارة المهام اليومية، بُني كمشروع تعليمي باستخدام جافا وتخطيطات XML.</p>
+                            <div class="project-tags">
+                                <span>جافا</span>
+                                <span>XML</span>
+                                <span>أندرويد SDK</span>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <h3>مدير المهام</h3>
+                            <p>مشروع تدريبي لتعلم أساسيات أندرويد — إضافة وتعديل وحذف المهام بواجهة XML نظيفة وتخزين محلي للبيانات.</p>
+                            <div class="project-links">
+                                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i> الكود</a>
+                                <a href="#" aria-label="عرض حي"><i class="fas fa-external-link-alt"></i> عرض</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal">
+                    <div class="project-inner">
+                        <div class="project-front">
+                            <div class="project-icon"><i class="fas fa-sticky-note"></i></div>
+                            <h3>حافظ الملاحظات</h3>
+                            <p>تطبيق أساسي لتدوين الملاحظات للتدرب على قاعدة بيانات SQLite والأنشطة وتخطيطات XML.</p>
+                            <div class="project-tags">
+                                <span>جافا</span>
+                                <span>XML</span>
+                                <span>SQLite</span>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <h3>حافظ الملاحظات</h3>
+                            <p>بُني لتعلم عمليات CRUD مع SQLite في أندرويد. يمكن للمستخدمين إنشاء وقراءة وتحديث وحذف الملاحظات بواجهة XML بسيطة.</p>
+                            <div class="project-links">
+                                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i> الكود</a>
+                                <a href="#" aria-label="عرض حي"><i class="fas fa-external-link-alt"></i> عرض</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal">
+                    <div class="project-inner">
+                        <div class="project-front">
+                            <div class="project-icon"><i class="fas fa-cloud-sun"></i></div>
+                            <h3>الطقس الآن</h3>
+                            <p>تطبيق تدريبي للطقس يجلب ويعرض بيانات الطقس باستخدام API عام وواجهة XML.</p>
+                            <div class="project-tags">
+                                <span>جافا</span>
+                                <span>XML</span>
+                                <span>REST API</span>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <h3>الطقس الآن</h3>
+                            <p>مشروع تعليمي لفهم استدعاءات API في أندرويد باستخدام جافا. يعرض معلومات الطقس الأساسية بتصميم ماتيريال نظيف.</p>
+                            <div class="project-links">
+                                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i> الكود</a>
+                                <a href="#" aria-label="عرض حي"><i class="fas fa-external-link-alt"></i> عرض</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal">
+                    <div class="project-inner">
+                        <div class="project-front">
+                            <div class="project-icon"><i class="fas fa-calculator"></i></div>
+                            <h3>الآلة الحاسبة</h3>
+                            <p>تطبيق آلة حاسبة بُني للتدرب على منطق جافا ومعالجة الأحداث وتصميم واجهة XML.</p>
+                            <div class="project-tags">
+                                <span>جافا</span>
+                                <span>XML</span>
+                                <span>أندرويد SDK</span>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <h3>الآلة الحاسبة</h3>
+                            <p>أحد أوائل مشاريعي في أندرويد — آلة حاسبة وظيفية باستخدام جافا للمنطق و XML لتصميم التخطيط. ساعدني على فهم أساسيات أندرويد.</p>
+                            <div class="project-links">
+                                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i> الكود</a>
+                                <a href="#" aria-label="عرض حي"><i class="fas fa-external-link-alt"></i> عرض</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== قسم المسيرة ========== -->
+    <section id="timeline" class="timeline section">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="section-label">مسيرتي</p>
+                <h2 class="section-title">الخبرة و<span class="gradient-text">التعليم</span></h2>
+            </div>
+            <div class="timeline-wrapper">
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">٢٠٢٣ — الحاضر</span>
+                        <h3>دبلوم في الهندسة (علوم الحاسب)</h3>
+                        <h4>معهد البوليتكنيك، بنغلاديش</h4>
+                        <p>أدرس دبلوم في علوم الحاسب والتقنية، أتعلم أساسيات البرمجة وهياكل البيانات ومفاهيم تطوير البرمجيات.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">٢٠٢٥ — الحاضر</span>
+                        <h3>بدأت تطوير أندرويد</h3>
+                        <h4>تعلّم ذاتي</h4>
+                        <p>تعلّم ذاتي لتطوير أندرويد باستخدام جافا و XML. أبني مشاريع تدريبية لتعزيز مهاراتي وفهم مفاهيم تطوير تطبيقات الهاتف المحمول.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== قسم التواصل ========== -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="section-label">تواصل معي</p>
+                <h2 class="section-title">اتصل <span class="gradient-text">بي</span></h2>
+            </div>
+            <div class="contact-grid">
+
+                <div class="contact-info reveal">
+                    <h3>لنتواصل</h3>
+                    <p>
+                        أنا مطوّر أندرويد جديد حريص على التعلّم والنمو. سواء كان لديك
+                        ملاحظات أو أفكار للتعاون أو تريد فقط إلقاء التحية — لا تتردد
+                        في التواصل!
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fab fa-github"></i>
+                            <a href="https://github.com/exploremaruf" target="_blank" rel="noopener">github.com/exploremaruf</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:maruf.chats@gmail.com">maruf.chats@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin-in"></i>
+                            <a href="https://linkedin.com/in/exploremaruf" target="_blank" rel="noopener">linkedin.com/in/exploremaruf</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/" target="_blank" rel="noopener">واتساب</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-telegram-plane"></i>
+                            <a href="https://t.me/exploremaruf" target="_blank" rel="noopener">تيليجرام</a>
+                        </div>
+                    </div>
+                    <div class="contact-socials">
+                        <a href="https://github.com/exploremaruf" target="_blank" rel="noopener" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:maruf.chats@gmail.com" aria-label="البريد الإلكتروني">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/exploremaruf" target="_blank" rel="noopener" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://wa.me/" target="_blank" rel="noopener" aria-label="واتساب">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://t.me/exploremaruf" target="_blank" rel="noopener" aria-label="تيليجرام">
+                            <i class="fab fa-telegram-plane"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <form class="contact-form reveal" id="contactForm" novalidate>
+                    <div class="form-group">
+                        <label for="name">الاسم الكامل</label>
+                        <input type="text" id="name" name="name" placeholder="اسمك الكريم" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">البريد الإلكتروني</label>
+                        <input type="email" id="email" name="email" placeholder="بريدك@مثال.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">الموضوع</label>
+                        <input type="text" id="subject" name="subject" placeholder="استفسار عن مشروع / تعاون">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">الرسالة</label>
+                        <textarea id="message" name="message" rows="5" placeholder="أخبرني عن مشروعك..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fas fa-paper-plane"></i> إرسال الرسالة
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== التذييل ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#home" class="logo">معروف<span>.ديف</span></a>
+                    <p>أتعلّم تطوير أندرويد تطبيقًا تلو الآخر.</p>
+                    <div class="footer-socials">
+                        <a href="https://github.com/exploremaruf" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="mailto:maruf.chats@gmail.com" aria-label="البريد الإلكتروني"><i class="fas fa-envelope"></i></a>
+                        <a href="https://linkedin.com/in/exploremaruf" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://wa.me/" target="_blank" rel="noopener" aria-label="واتساب"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://t.me/exploremaruf" target="_blank" rel="noopener" aria-label="تيليجرام"><i class="fab fa-telegram-plane"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#about">عنّي</a></li>
+                        <li><a href="#skills">المهارات</a></li>
+                        <li><a href="#projects">المشاريع</a></li>
+                        <li><a href="#contact">التواصل</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>التقنيات</h4>
+                    <ul>
+                        <li><a href="#skills">أندرويد SDK</a></li>
+                        <li><a href="#skills">جافا</a></li>
+                        <li><a href="#skills">XML</a></li>
+                        <li><a href="#skills">Git</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; ٢٠٢٦ معروف.ديف — جميع الحقوق محفوظة</p>
+                <p>صُمّم وبُني بـ <i class="fas fa-heart" style="color: var(--accent-secondary);"></i> بواسطة معروف حسن</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="asset/script.js"></script>
+</body>
+</html>
