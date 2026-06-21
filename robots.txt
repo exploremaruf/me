@@ -1,19 +1,14 @@
-# robots.txt for https://exploremaruf.github.io/me/
-# Allow all search engines to index the site
-
+# robots.txt for https://itsmaruf.me/
 User-agent: *
-Allow: /me/
-Disallow: 
+Allow: /
+Disallow:
 
-# Google-specific rules
 User-agent: Googlebot
-Allow: /me/
+Allow: /
 Crawl-delay: 1
 
-# Bing-specific rules
 User-agent: Bingbot
-Allow: /me/
+Allow: /
 Crawl-delay: 1
 
-# Point to sitemap
-Sitemap: https://exploremaruf.github.io/me/sitemap.xml
+Sitemap: https://itsmaruf.me/sitemap.xml

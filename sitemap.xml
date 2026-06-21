@@ -1,80 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-    <!-- English -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://exploremaruf.github.io/me/</loc>
-        <lastmod>2026-06-21</lastmod>
+        <loc>https://itsmaruf.me/</loc>
+        <lastmod>2026-06-22</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://exploremaruf.github.io/me/"/>
-        <xhtml:link rel="alternate" hreflang="it" href="https://exploremaruf.github.io/me/it/"/>
-        <xhtml:link rel="alternate" hreflang="ar" href="https://exploremaruf.github.io/me/ar/"/>
-        <xhtml:link rel="alternate" hreflang="ru" href="https://exploremaruf.github.io/me/ru/"/>
-    </url>
-    
-    <!-- Italian -->
-    <url>
-        <loc>https://exploremaruf.github.io/me/it/</loc>
-        <lastmod>2026-06-21</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://exploremaruf.github.io/me/"/>
-        <xhtml:link rel="alternate" hreflang="it" href="https://exploremaruf.github.io/me/it/"/>
-        <xhtml:link rel="alternate" hreflang="ar" href="https://exploremaruf.github.io/me/ar/"/>
-        <xhtml:link rel="alternate" hreflang="ru" href="https://exploremaruf.github.io/me/ru/"/>
-    </url>
-    
-    <!-- Arabic -->
-    <url>
-        <loc>https://exploremaruf.github.io/me/ar/</loc>
-        <lastmod>2026-06-21</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://exploremaruf.github.io/me/"/>
-        <xhtml:link rel="alternate" hreflang="it" href="https://exploremaruf.github.io/me/it/"/>
-        <xhtml:link rel="alternate" hreflang="ar" href="https://exploremaruf.github.io/me/ar/"/>
-        <xhtml:link rel="alternate" hreflang="ru" href="https://exploremaruf.github.io/me/ru/"/>
-    </url>
-    
-    <!-- Russian -->
-    <url>
-        <loc>https://exploremaruf.github.io/me/ru/</loc>
-        <lastmod>2026-06-21</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://exploremaruf.github.io/me/"/>
-        <xhtml:link rel="alternate" hreflang="it" href="https://exploremaruf.github.io/me/it/"/>
-        <xhtml:link rel="alternate" hreflang="ar" href="https://exploremaruf.github.io/me/ar/"/>
-        <xhtml:link rel="alternate" hreflang="ru" href="https://exploremaruf.github.io/me/ru/"/>
-    </url>
-    
-    <!-- Activities Pages -->
-    <url>
-        <loc>https://exploremaruf.github.io/me/activities.html</loc>
-        <lastmod>2026-06-21</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    
-    <url>
-        <loc>https://exploremaruf.github.io/me/it/activities.html</loc>
-        <lastmod>2026-06-21</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    
-    <url>
-        <loc>https://exploremaruf.github.io/me/ar/activities.html</loc>
-        <lastmod>2026-06-21</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    
-    <url>
-        <loc>https://exploremaruf.github.io/me/ru/activities.html</loc>
-        <lastmod>2026-06-21</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
     </url>
 </urlset>
