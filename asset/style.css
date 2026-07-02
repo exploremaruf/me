@@ -296,32 +296,149 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;letter-spacing:-0.02
 /* ===========================================================
    PROJECTS
    =========================================================== */
-.projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;}
-.project-card{
-  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
-  padding:1.8rem;transition:transform .25s ease, border-color .25s ease, box-shadow .25s ease;
-}
-.project-card:hover{transform:translateY(-5px);border-color:var(--accent);box-shadow:var(--shadow);}
-.project-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.1rem;}
-.project-icon{
-  width:46px;height:46px;border-radius:11px;background:var(--accent-soft);color:var(--accent);
-  display:flex;align-items:center;justify-content:center;font-size:1.2rem;
-}
-.project-links{display:flex;gap:.6rem;}
-.project-links a{
-  width:34px;height:34px;border-radius:8px;border:1px solid var(--border);
-  display:flex;align-items:center;justify-content:center;color:var(--text-dim);transition:.2s ease;
-}
-.project-links a:hover{color:var(--accent);border-color:var(--accent);}
-.project-card h3{font-size:1.15rem;margin-bottom:.5rem;}
-.project-card p{color:var(--text-dim);font-size:.9rem;margin-bottom:1.1rem;}
-.project-tags{display:flex;gap:.5rem;flex-wrap:wrap;}
-.project-tags span{
-  font-family:var(--font-mono);font-size:.72rem;color:var(--accent);
-  background:var(--accent-soft);padding:.3rem .6rem;border-radius:6px;
+
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:1.8rem;
 }
 
-@media (max-width:760px){.projects-grid{grid-template-columns:1fr;}}
+.project-card{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    overflow:hidden;
+    transition:.35s ease;
+    display:flex;
+    flex-direction:column;
+    box-shadow:var(--shadow);
+}
+
+.project-card:hover{
+    transform:translateY(-8px);
+    border-color:var(--accent);
+}
+
+/* ---------- Image ---------- */
+
+.project-image{
+    width:100%;
+    height:220px;
+    overflow:hidden;
+    background:var(--bg-soft);
+}
+
+.project-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:transform .5s ease;
+}
+
+.project-card:hover .project-image img{
+    transform:scale(1.08);
+}
+
+/* ---------- Content ---------- */
+
+.project-content{
+    padding:1.6rem;
+    display:flex;
+    flex-direction:column;
+    flex:1;
+}
+
+/* ---------- Top ---------- */
+
+.project-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:1rem;
+}
+
+.project-icon{
+    width:48px;
+    height:48px;
+    border-radius:12px;
+    background:var(--accent-soft);
+    color:var(--accent);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:1.2rem;
+}
+
+.project-links{
+    display:flex;
+    gap:.6rem;
+}
+
+.project-links a{
+    width:38px;
+    height:38px;
+    border-radius:10px;
+    border:1px solid var(--border);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--text-dim);
+    transition:.25s ease;
+}
+
+.project-links a:hover{
+    background:var(--accent);
+    border-color:var(--accent);
+    color:#06140e;
+}
+
+/* ---------- Text ---------- */
+
+.project-content h3{
+    font-size:1.2rem;
+    margin-bottom:.7rem;
+}
+
+.project-content p{
+    color:var(--text-dim);
+    font-size:.92rem;
+    line-height:1.7;
+    margin-bottom:1.3rem;
+    flex:1;
+}
+
+/* ---------- Tags ---------- */
+
+.project-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:.55rem;
+}
+
+.project-tags span{
+    padding:.38rem .8rem;
+    border-radius:999px;
+    background:var(--accent-soft);
+    color:var(--accent);
+    font-size:.72rem;
+    font-family:var(--font-mono);
+    border:1px solid rgba(52,211,153,.15);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width:760px){
+
+    .projects-grid{
+        grid-template-columns:1fr;
+    }
+
+    .project-image{
+        height:200px;
+    }
+
+}
 
 /* ===========================================================
    TIMELINE
