@@ -116,8 +116,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;letter-spacing:-0.02
   max-width:1180px;margin:0 auto;padding:0 1.5rem;
   height:72px;display:flex;align-items:center;justify-content:space-between;
 }
-.logo{font-family:var(--font-display);font-weight:700;font-size:1.15rem;display:flex;align-items:center;gap:.15rem;}
-.logo-mark{color:var(--accent);}
+.logo{font-family:var(--font-display);font-weight:700;font-size:1.15rem;display:flex;align-items:center;gap:.55rem;}
 .logo-dim{color:var(--text-faint);font-weight:500;margin-left:.2rem;}
 
 .nav-links{display:flex;align-items:center;gap:2.1rem;}
@@ -258,6 +257,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;letter-spacing:-0.02
 .stat-card{
   background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
   padding:1.6rem 1.2rem;text-align:center;transition:border-color .25s ease, transform .25s ease;
+  position:relative;overflow:hidden;
 }
 .stat-card:hover{border-color:var(--accent);transform:translateY(-4px);}
 .stat-number{font-family:var(--font-display);font-size:2rem;font-weight:700;color:var(--accent);}
@@ -273,6 +273,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;letter-spacing:-0.02
 .skill-card{
   background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
   padding:1.8rem;transition:transform .25s ease, border-color .25s ease;
+  position:relative;overflow:hidden;
 }
 .skill-card:hover{transform:translateY(-5px);border-color:var(--accent);}
 .skill-icon{
@@ -485,6 +486,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;letter-spacing:-0.02
 .contact-form{
   background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
   padding:2rem;display:flex;flex-direction:column;gap:1.1rem;
+  position:relative;overflow:hidden;
 }
 .form-group{display:flex;flex-direction:column;gap:.4rem;}
 .form-group label{font-size:.82rem;color:var(--text-dim);}
@@ -537,6 +539,160 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;letter-spacing:-0.02
 .back-to-top:hover{color:var(--accent);border-color:var(--accent);}
 
 /* ===========================================================
+   CLICK RIPPLE EFFECT
+   =========================================================== */
+.ripple{
+  position:fixed;z-index:9997;pointer-events:none;
+  border-radius:50%;
+  transform:translate(-50%,-50%);
+  border:1.5px solid var(--accent);
+  background:radial-gradient(circle, var(--accent-soft) 0%, transparent 70%);
+  opacity:.6;
+  animation:ripple-expand .7s cubic-bezier(.22,.68,.36,1) forwards;
+}
+@keyframes ripple-expand{
+  0%{width:0;height:0;opacity:.55;}
+  100%{width:220px;height:220px;opacity:0;}
+}
+
+/* ===========================================================
+   CUSTOM CURSOR (desktop, fine-pointer only)
+   =========================================================== */
+.cursor-dot,.cursor-ring{
+  position:fixed;top:0;left:0;border-radius:50%;
+  pointer-events:none;z-index:9998;
+  transform:translate(-50%,-50%);
+  opacity:0;
+}
+.cursor-dot{
+  width:7px;height:7px;background:var(--accent);
+  transition:opacity .25s ease, background .25s ease, width .25s ease, height .25s ease;
+}
+.cursor-ring{
+  width:36px;height:36px;border:1.5px solid var(--accent);
+  transition:opacity .25s ease, width .2s ease, height .2s ease, background .2s ease, border-color .2s ease;
+}
+body.cursor-active .cursor-dot{opacity:1;}
+body.cursor-active .cursor-ring{opacity:.5;}
+body.cursor-active.cursor-hover .cursor-ring{
+  width:54px;height:54px;background:var(--accent-soft);opacity:.85;
+}
+body.cursor-active.cursor-hover .cursor-dot{opacity:0;}
+
+@media (hover:hover) and (pointer:fine){
+  body.cursor-active,
+  body.cursor-active a,
+  body.cursor-active button,
+  body.cursor-active input,
+  body.cursor-active textarea{cursor:none;}
+}
+@media (hover:none), (pointer:coarse){
+  .cursor-dot,.cursor-ring{display:none;}
+}
+
+/* ===========================================================
+   CARD SPOTLIGHT (glow follows cursor)
+   =========================================================== */
+.skill-card,.project-card,.stat-card,.contact-form{--mx:50%;--my:50%;}
+.skill-card::before,.project-card::before,.stat-card::before,.contact-form::before{
+  content:'';position:absolute;inset:0;z-index:2;border-radius:inherit;
+  background:radial-gradient(240px circle at var(--mx) var(--my), var(--accent-soft), transparent 72%);
+  opacity:0;transition:opacity .4s ease;pointer-events:none;
+}
+.skill-card:hover::before,.project-card:hover::before,
+.stat-card:hover::before,.contact-form:hover::before{opacity:1;}
+
+/* ===========================================================
+   HERO IMAGE TILT
+   =========================================================== */
+.hero-image .image-frame{will-change:transform;}
+
+/* ===========================================================
+   ANTIGRAVITY PARTICLE CANVAS
+   =========================================================== */
+.antigravity-canvas{
+  position:fixed;inset:0;width:100%;height:100%;
+  z-index:-1;pointer-events:none;display:block;
+}
+
+/* ===========================================================
+   LOADING SCREEN (SPLASH)
+   =========================================================== */
+body.loading{overflow:hidden;}
+.preloader{
+  position:fixed;inset:0;z-index:9999;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--bg);
+  transition:opacity .6s cubic-bezier(.65,0,.35,1), visibility .6s;
+}
+.preloader.hidden{opacity:0;visibility:hidden;pointer-events:none;}
+.preloader-inner{display:flex;flex-direction:column;align-items:center;gap:1.1rem;}
+.preloader-logo{
+  width:56px;height:56px;
+  animation:preloader-float 2.2s ease-in-out infinite;
+}
+.preloader-mark{width:100%;height:100%;object-fit:contain;
+  filter:drop-shadow(0 0 22px var(--accent-soft));}
+@keyframes preloader-float{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
+.preloader-bar{width:180px;height:3px;border-radius:99px;background:var(--surface-2);overflow:hidden;}
+.preloader-fill{
+  height:100%;width:0%;border-radius:99px;
+  background:linear-gradient(90deg,var(--accent),var(--accent-2));
+}
+.preloader-percent{font-family:var(--font-mono);font-size:.72rem;color:var(--text-faint);letter-spacing:.05em;}
+.preloader-label{font-family:var(--font-mono);font-size:.68rem;color:var(--text-faint);
+  text-transform:uppercase;letter-spacing:.16em;margin-top:.2rem;}
+
+/* ===========================================================
+   LOGO ICON (navbar / footer)
+   =========================================================== */
+.logo-icon{width:28px;height:28px;object-fit:contain;flex-shrink:0;transition:transform .35s cubic-bezier(.34,1.56,.64,1);}
+.logo:hover .logo-icon{transform:rotate(-10deg) scale(1.08);}
+.footer-brand .logo-icon{width:32px;height:32px;}
+
+/* Navbar condenses slightly once scrolled */
+.navbar{transition:background .3s ease, box-shadow .3s ease;}
+.nav-container{transition:height .3s ease;}
+.navbar.scrolled{box-shadow:0 12px 30px -20px rgba(0,0,0,.5);}
+.navbar.scrolled .nav-container{height:64px;}
+
+/* ===========================================================
+   BRAND WATERMARKS (subtle background accents)
+   =========================================================== */
+.hero-bg::after{
+  content:'';position:absolute;top:50%;right:-6%;
+  width:620px;height:620px;transform:translateY(-50%);
+  background:url('images/logo-mark-accent.png') no-repeat center/contain;
+  opacity:.05;pointer-events:none;
+}
+@media (max-width:900px){.hero-bg::after{display:none;}}
+
+.about{position:relative;}
+.about::before{
+  content:'';position:absolute;z-index:-1;top:-6%;left:-8%;
+  width:420px;height:420px;
+  background:url('images/logo-mark-accent.png') no-repeat center/contain;
+  opacity:.04;pointer-events:none;
+}
+@media (max-width:900px){.about::before{width:280px;height:280px;}}
+
+.project-card{position:relative;}
+.project-card::after{
+  content:'';position:absolute;z-index:-1;bottom:-22px;right:-22px;
+  width:120px;height:120px;
+  background:url('images/logo-mark-accent.png') no-repeat center/contain;
+  opacity:.055;pointer-events:none;
+}
+
+.footer{position:relative;overflow:hidden;}
+.footer::after{
+  content:'';position:absolute;z-index:-1;bottom:-70px;right:-40px;
+  width:300px;height:300px;
+  background:url('images/logo-mark-accent.png') no-repeat center/contain;
+  opacity:.05;pointer-events:none;
+}
+
+/* ===========================================================
    REVEAL ANIMATION
    =========================================================== */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease, transform .7s ease;}
@@ -545,4 +701,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;letter-spacing:-0.02
 @media (prefers-reduced-motion: reduce){
   *{animation:none !important;transition:none !important;}
   .reveal{opacity:1;transform:none;}
+  .antigravity-canvas{display:none !important;}
+  .preloader{display:none !important;}
+  body.loading{overflow:visible !important;}
 }

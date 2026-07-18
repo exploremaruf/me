@@ -24,6 +24,7 @@
       localStorage.setItem('theme', 'light');
       themeToggle.setAttribute('aria-pressed', 'true');
     }
+    document.dispatchEvent(new CustomEvent('theme:change'));
   });
 
   /* ---------- Mobile nav ---------- */
@@ -37,6 +38,12 @@
   navLinks?.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => navLinks.classList.remove('open'));
   });
+
+  /* ---------- Navbar condensed state on scroll ---------- */
+  const navbarEl = document.getElementById('navbar');
+  const onNavScroll = () => navbarEl?.classList.toggle('scrolled', window.scrollY > 40);
+  window.addEventListener('scroll', onNavScroll, { passive: true });
+  onNavScroll();
 
   /* ---------- Active link on scroll ---------- */
   const sections = document.querySelectorAll('main section[id]');

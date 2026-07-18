@@ -10,8 +10,8 @@
      ======================================================== -->
 <title>Md. Maruf Hasan Soncoy | Android &amp; Flutter Developer — itsmaruf.me</title>
 <link rel="icon" type="image/png" href="asset/images/M.png">
-<meta name="description" content="Md. Maruf Hasan Soncoy (itsmaruf) — Android developer from Bangladesh transitioning into cross-platform development with Flutter &amp; Dart. Explore Maruf Hasan's projects, skills, and journey at itsmaruf.me.">
-<meta name="keywords" content="Md. Maruf Hasan Soncoy, Maruf Hasan, Maruf Hasan Soncoy, itsmaruf, Flutter Developer Bangladesh, Android Developer Bangladesh, Dart Developer, Cross-Platform Developer, Java Developer, exploremaruf">
+<meta name="description" content="Md. Maruf Hasan Soncoy (itsmaruf) — Android developer from Bangladesh transitioning into cross-platform development with Flutter &amp; Dart. Explore Maruf Hasan's projects, skills, experience, and contact.">
+<meta name="keywords" content="Md. Maruf Hasan Soncoy, Maruf Hasan, Maruf Hasan Soncoy, itsmaruf, Flutter Developer Bangladesh, Android Developer Bangladesh, Dart Developer, Cross-Platform Developer, Mobile App Developer Bangladesh">
 <meta name="author" content="Md. Maruf Hasan Soncoy">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="googlebot" content="index, follow">
@@ -46,6 +46,20 @@
 
 <link rel="stylesheet" href="asset/style.css">
 
+<!-- Set theme before first paint to avoid a flash of the wrong theme -->
+<script>
+  (function(){
+    try{
+      var stored = localStorage.getItem('theme');
+      var light = stored ? stored === 'light' : window.matchMedia('(prefers-color-scheme: light)').matches;
+      if (light) document.documentElement.setAttribute('data-theme', 'light');
+    }catch(e){}
+  })();
+</script>
+
+<!-- If JavaScript is unavailable, don't let the loading screen block the site -->
+<noscript><style>.preloader{display:none !important;} .antigravity-canvas{display:none !important;} body.loading{overflow:visible !important;}</style></noscript>
+
 <!-- ========================================================
      JSON-LD — Person schema, tailored for Software/Android Engineer
      ======================================================== -->
@@ -77,6 +91,25 @@
 </head>
 <body>
 
+<!-- ============ ANTIGRAVITY PARTICLE FIELD ============ -->
+<canvas id="antigravityCanvas" class="antigravity-canvas" aria-hidden="true"></canvas>
+
+<!-- ============ CUSTOM CURSOR ============ -->
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+<!-- ============ LOADING SCREEN ============ -->
+<div class="preloader" id="preloader" role="status" aria-label="Loading">
+  <div class="preloader-inner">
+    <div class="preloader-logo">
+      <img src="asset/images/logo-mark-accent.png" alt="" class="preloader-mark">
+    </div>
+    <div class="preloader-bar"><div class="preloader-fill" id="preloaderFill"></div></div>
+    <span class="preloader-percent" id="preloaderPercent">0%</span>
+    <span class="preloader-label">itsmaruf.me</span>
+  </div>
+</div>
+
 <!-- Skip link for accessibility -->
 <a href="#main" class="skip-link">Skip to content</a>
 
@@ -85,7 +118,8 @@
 <nav class="navbar" id="navbar" aria-label="Primary">
   <div class="nav-container">
     <a href="#home" class="logo" aria-label="Maruf Hasan — Home">
-      <span class="logo-mark">M.</span>Maruf<span class="logo-dim">Soncoy</span>
+      <img src="asset/images/logo-mark-accent.png" alt="" class="logo-icon">
+      <span class="logo-text">Maruf<span class="logo-dim">Soncoy</span></span>
     </a>
 
     <ul class="nav-links" id="navLinks">
@@ -124,7 +158,7 @@
 
     <div class="hero-container">
 
-      <div class="hero-text reveal">
+      <div class="hero-text">
 
         <!-- Signature element: a "build status" console strip -->
         <div class="build-console" aria-hidden="false">
@@ -160,7 +194,7 @@
         </div>
       </div>
 
-      <div class="hero-image reveal">
+      <div class="hero-image">
         <div class="image-frame">
           <img src="asset/images/maruf.jpeg" width="420" height="420" loading="eager"
                alt="Md. Maruf Hasan Soncoy (itsmaruf), Android developer from Bangladesh">
@@ -236,7 +270,7 @@
       </div>
 
       <div class="skills-grid">
-        <article class="skill-card reveal">
+        <article class="skill-card">
           <div class="skill-icon"><i class="fas fa-mobile-screen-button" aria-hidden="true"></i></div>
           <h3>Flutter</h3>
           <p>Currently learning cross-platform UI development &amp; widget composition with Flutter</p>
@@ -244,7 +278,7 @@
           <span class="skill-percent">30%</span>
         </article>
 
-        <article class="skill-card reveal">
+        <article class="skill-card">
           <div class="skill-icon"><i class="fas fa-dharmachakra" aria-hidden="true"></i></div>
           <h3>Dart</h3>
           <p>Learning Dart fundamentals — syntax, async programming &amp; state management</p>
@@ -252,7 +286,7 @@
           <span class="skill-percent">30%</span>
         </article>
 
-        <article class="skill-card reveal">
+        <article class="skill-card">
           <div class="skill-icon"><i class="fab fa-android" aria-hidden="true"></i></div>
           <h3>Android SDK</h3>
           <p>Native Android development, activities, fragments &amp; lifecycle management</p>
@@ -260,7 +294,7 @@
           <span class="skill-percent">55%</span>
         </article>
 
-        <article class="skill-card reveal">
+        <article class="skill-card">
           <div class="skill-icon"><i class="fab fa-java" aria-hidden="true"></i></div>
           <h3>Java</h3>
           <p>Core Java programming &amp; Android app development with Java</p>
@@ -268,7 +302,7 @@
           <span class="skill-percent">50%</span>
         </article>
 
-        <article class="skill-card reveal">
+        <article class="skill-card">
           <div class="skill-icon"><i class="fas fa-code" aria-hidden="true"></i></div>
           <h3>XML</h3>
           <p>Building Android UI layouts with XML &amp; the View-based system</p>
@@ -276,7 +310,7 @@
           <span class="skill-percent">55%</span>
         </article>
 
-        <article class="skill-card reveal">
+        <article class="skill-card">
           <div class="skill-icon"><i class="fab fa-git-alt" aria-hidden="true"></i></div>
           <h3>Git / GitHub</h3>
           <p>Version control basics &amp; managing code repositories</p>
@@ -284,7 +318,7 @@
           <span class="skill-percent">45%</span>
         </article>
 
-        <article class="skill-card reveal">
+        <article class="skill-card">
           <div class="skill-icon"><i class="fas fa-palette" aria-hidden="true"></i></div>
           <h3>Material Design</h3>
           <p>Applying Material Design guidelines for clean, consistent UIs</p>
@@ -292,7 +326,7 @@
           <span class="skill-percent">45%</span>
         </article>
 
-        <article class="skill-card reveal">
+        <article class="skill-card">
           <div class="skill-icon"><i class="fas fa-fire" aria-hidden="true"></i></div>
           <h3>Firebase</h3>
           <p>Learning Firebase basics for authentication &amp; data storage</p>
@@ -313,103 +347,127 @@
 
       <div class="projects-grid">
 
-<article class="project-card reveal">
+        <article class="project-card">
+          <div class="project-image">
+            <img src="asset/images/OtoWave.png"
+                 alt="OtoWave Android Music Player Screenshot"
+                 loading="lazy">
+          </div>
 
-    <!-- Project Image -->
-    <div class="project-image">
-        <img src="asset/images/OtoWave.png"
-             alt="OtoWave Android Music Player Screenshot"
-             loading="lazy">
-    </div>
-
-    <!-- Project Content -->
-    <div class="project-content">
-
-        <div class="project-top">
-            <div class="project-icon">
+          <div class="project-content">
+            <div class="project-top">
+              <div class="project-icon">
                 <i class="fas fa-music"></i>
-            </div>
+              </div>
 
-            <div class="project-links">
+              <div class="project-links">
                 <a href="https://github.com/exploremaruf/OtoWave-Audio-Player"
                    target="_blank"
                    rel="noopener"
                    aria-label="OtoWave source code on GitHub">
-                    <i class="fab fa-github"></i>
+                  <i class="fab fa-github"></i>
                 </a>
 
                 <a href="#"
                    aria-label="OtoWave live demo">
-                    <i class="fas fa-external-link-alt"></i>
+                  <i class="fas fa-external-link-alt"></i>
                 </a>
+              </div>
             </div>
-        </div>
 
-        <h3>OtoWave</h3>
+            <h3>OtoWave</h3>
 
-        <p>
-            OtoWave is a modern offline music player for Android built with Java and XML.
-            It automatically scans local storage for audio files, supports background
-            playback with media controls, and delivers a clean Material Design interface.
-            The project is fully open-source and designed for a smooth listening experience.
-        </p>
+            <p>
+              OtoWave is a modern offline music player for Android built with Java and XML.
+              It automatically scans local storage for audio files, supports background
+              playback with media controls, and delivers a clean Material Design interface.
+              The project is fully open-source and designed for a smooth listening experience.
+            </p>
 
-        <div class="project-tags">
-            <span>Java</span>
-            <span>XML</span>
-            <span>MediaPlayer</span>
-            <span>Android SDK</span>
-        </div>
-
-    </div>
-
-</article>
-
-        <article class="project-card reveal">
-          <div class="project-top">
-            <div class="project-icon"><i class="fas fa-sticky-note" aria-hidden="true"></i></div>
-            <div class="project-links">
-              <a href="#" aria-label="NoteKeeper source code on GitHub"><i class="fab fa-github"></i></a>
-              <a href="#" aria-label="NoteKeeper live demo"><i class="fas fa-external-link-alt"></i></a>
+            <div class="project-tags">
+              <span>Java</span>
+              <span>XML</span>
+              <span>MediaPlayer</span>
+              <span>Android SDK</span>
             </div>
-          </div>
-          <h3>NoteKeeper</h3>
-          <p>A note-taking app built to practice CRUD operations with SQLite — create, read,
-            update and delete notes through a simple XML interface.</p>
-          <div class="project-tags">
-            <span>Java</span><span>XML</span><span>SQLite</span>
           </div>
         </article>
 
-        <article class="project-card reveal">
-          <div class="project-top">
-            <div class="project-icon"><i class="fas fa-cloud-sun" aria-hidden="true"></i></div>
-            <div class="project-links">
-              <a href="#" aria-label="WeatherNow source code on GitHub"><i class="fab fa-github"></i></a>
-              <a href="#" aria-label="WeatherNow live demo"><i class="fas fa-external-link-alt"></i></a>
-            </div>
+        <article class="project-card">
+          <div class="project-image">
+            <img src="asset/images/shebaai.png"
+                 alt="ShebaAI First-Aid Assistant Screenshot"
+                 loading="lazy">
           </div>
-          <h3>WeatherNow</h3>
-          <p>A weather app that fetches and displays live data from a public API through a
-            clean Material Design, XML-based layout.</p>
-          <div class="project-tags">
-            <span>Java</span><span>XML</span><span>REST API</span>
+
+          <div class="project-content">
+            <div class="project-top">
+              <div class="project-icon"><i class="fas fa-briefcase-medical" aria-hidden="true"></i></div>
+              <div class="project-links">
+                <a href="https://github.com/exploremaruf/ShebaAI" target="_blank" rel="noopener" aria-label="ShebaAI source code on GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="ShebaAI live demo"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <h3>ShebaAI</h3>
+            <p>ShebaAI is a minimalist offline First-Aid assistant built for Android. It leverages on-device LLM inference to provide instant medical guidance without internet connectivity.</p>
+            <div class="project-tags">
+              <span>Android</span><span>Offline AI</span><span>First Aid</span>
+            </div>
           </div>
         </article>
 
-        <article class="project-card reveal">
-          <div class="project-top">
-            <div class="project-icon"><i class="fas fa-calculator" aria-hidden="true"></i></div>
-            <div class="project-links">
-              <a href="#" aria-label="SimpleCalc source code on GitHub"><i class="fab fa-github"></i></a>
-              <a href="#" aria-label="SimpleCalc live demo"><i class="fas fa-external-link-alt"></i></a>
+        <article class="project-card">
+          <div class="project-image">
+            <img src="asset/images/plexus.png"
+                 alt="Plexus Library Management System Screenshot"
+                 loading="lazy">
+          </div>
+
+          <div class="project-content">
+            <div class="project-top">
+              <div class="project-icon"><i class="fas fa-book" aria-hidden="true"></i></div>
+              <div class="project-links">
+                <a href="https://github.com/exploremaruf/Plexus" target="_blank" rel="noopener" aria-label="Plexus source code on GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="Plexus live demo"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <h3>Plexus</h3>
+            <p>
+              Plexus is a modern, full-featured Library Management System (LMS) built with the Django framework.
+              It bridges the gap between students and administrators by providing a unified, secure platform.
+              Track and manage book inventory in real time, automate borrowing and return workflows, manage student profiles,
+              generate insightful usage and financial reports, and enforce role-based access control for staff and students.
+              Whether for a school, college, or institutional library, Plexus delivers a clean, responsive, and user-friendly experience.
+            </p>
+            <div class="project-tags">
+              <span>Django</span><span>Python</span><span>LMS</span><span>Role-Based Access</span>
             </div>
           </div>
-          <h3>SimpleCalc</h3>
-          <p>One of my first Android projects — a functional calculator using Java for logic
-            and XML for layout design.</p>
-          <div class="project-tags">
-            <span>Java</span><span>XML</span><span>Android SDK</span>
+        </article>
+
+                  <article class="project-card">
+          <div class="project-image">
+            <img src="asset/images/dekhiapplogo.png"
+                 alt="dekhiapplogo"
+                 loading="lazy">
+          </div>
+
+          <div class="project-content">
+            <div class="project-top">
+              <div class="project-icon"><i class="fas fa-tv" aria-hidden="true"></i></div>
+              <div class="project-links">
+                <a href="https://github.com/exploremaruf/dekhi" target="_blank" rel="noopener" aria-label="dekhi source code on GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="dekhi live demo"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <h3>Dekhi</h3>
+            <p>
+              Dekhi is a cinematic IPTV player for Android that lets users import, manage, and watch M3U stream playlists. It features a modern Material 3 UI with support for favorites, watch history, and Picture-in-Picture mode.
+            </p>
+            <div class="project-tags">
+              <span>Android (Native) & Java</span><span>
+Room & SQLite</span><span>Media3 & ExoPlayer</span><span>Glide</span>
+            </div>
           </div>
         </article>
 
@@ -426,7 +484,7 @@
       </div>
 
       <div class="timeline-wrapper">
-        <div class="timeline-item reveal">
+        <div class="timeline-item">
           <span class="timeline-year">2023</span>
           <div class="timeline-card">
             <span class="timeline-date">2023 — Present</span>
@@ -437,7 +495,7 @@
           </div>
         </div>
 
-        <div class="timeline-item reveal">
+        <div class="timeline-item">
           <span class="timeline-year">2025</span>
           <div class="timeline-card">
             <span class="timeline-date">2025 — Present</span>
@@ -448,7 +506,7 @@
           </div>
         </div>
 
-        <div class="timeline-item reveal">
+        <div class="timeline-item">
           <span class="timeline-year">2026</span>
           <div class="timeline-card">
             <span class="timeline-date">2026 — Present</span>
@@ -528,7 +586,7 @@
   <div class="container">
     <div class="footer-content">
       <div class="footer-brand">
-        <a href="#home" class="logo"><span class="logo-mark">M.</span>Maruf<span class="logo-dim">Soncoy</span></a>
+        <a href="#home" class="logo"><img src="asset/images/logo-mark-accent.png" alt="" class="logo-icon"><span class="logo-text">Maruf<span class="logo-dim">Soncoy</span></span></a>
         <p>Md. Maruf Hasan Soncoy — Android developer transitioning into Flutter, one app at a time.</p>
         <div class="footer-socials">
           <a href="https://github.com/exploremaruf" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
@@ -569,6 +627,12 @@
   <i class="fas fa-arrow-up"></i>
 </button>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/ScrollTrigger.min.js"></script>
 <script src="asset/script.js"></script>
+<script src="asset/particles.js"></script>
+<script src="asset/preloader.js"></script>
+<script src="asset/animations.js"></script>
+<script src="asset/interactions.js"></script>
 </body>
 </html>
